@@ -1,4 +1,4 @@
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import AuthForm from "../components/AuthForm.tsx";
 import credentials from "../assets/data/credentials.json";
 import {useNavigate} from "react-router-dom";
@@ -26,14 +26,17 @@ export default function LoginPage() {
         left: '37px',
       }}/>
     <Box sx={{
-      height: '100%',
+      height: '100vh',
+      width: '100vw',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#1B093C'
     }}>
-      <h1>Welcome</h1>
+      <Typography variant={'h1'} fontFamily={'Inter'}>
+        Welcome
+      </Typography>
       <AuthForm onSubmit={handleSubmit}/>
     </Box>
   </>
