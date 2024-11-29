@@ -1,13 +1,29 @@
 import {Box, Button, FormLabel, TextField} from "@mui/material";
 import {useState} from "react";
+import {isValidMail} from "../utils/utils.ts";
 
-export default function AuthForm({onSubmit}: {onSubmit: (user: string, password: string) => void}) {
+interface AuthFormProps {
+  onSubmit: (user: string, password: string) => void;
+}
 
-  const [user, setUser] = useState<string>('');
+export default function AuthForm({onSubmit}: AuthFormProps) {
+
+  const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [errors, setErrors] = useState<{ user: string; password: string }>({ user: '', password: '' });
 
   const handleSubmit = () => {
-    onSubmit(user, password);
+    if (!isValidMail(email) || !password) {
+      setErrors({
+        user: !isValidMail(email) ? 'Invalid email' : '',
+        password: !password ? 'Invalid password' : '',
+      })
+      return;
+    } else {
+      setErrors({user: '', password: ''});
+    }
+
+    onSubmit(email, password);
   }
 
   return (
@@ -25,9 +41,10 @@ export default function AuthForm({onSubmit}: {onSubmit: (user: string, password:
             height: '48px',
           },
         }}
-        type="text"
-        value={user}
-        onChange={(e) => setUser(e.target.value)}
+        value={email}
+        error={!!errors.user}
+        helperText={errors.user}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <FormLabel sx={{fontSize: 14, color: 'white', fontWeight: 'bold', mt: 4, mb: 1}}>
         Password
@@ -44,6 +61,8 @@ export default function AuthForm({onSubmit}: {onSubmit: (user: string, password:
         }}
         type="password"
         value={password}
+        error={!!errors.password}
+        helperText={errors.password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button
