@@ -1,9 +1,14 @@
+import {Route, Routes} from "react-router-dom";
+
+import LoginPage from "./pages/LoginPage.tsx";
 import './App.css'
 
 function App() {
   return (
     <>
-      Hello world!
+      <Routes>
+        <Route path="/login" element={<LoginPage/>}/>
+      </Routes>
     </>
   )
 }
