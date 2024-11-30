@@ -1,5 +1,5 @@
 import {Box, Typography} from "@mui/material";
-import plusIcon from "../assets/images/plus-icon.svg";
+import plusIcon from "../../assets/images/icons/plus-icon.svg";
 import {Company} from "./SearchData.tsx";
 
 interface RecommendedCompaniesProps {

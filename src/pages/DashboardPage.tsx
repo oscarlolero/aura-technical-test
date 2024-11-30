@@ -1,9 +1,9 @@
 import {Box, Typography} from "@mui/material";
-import heroImage from '../assets/images/hero-image.jpg';
-import documentsImage from '../assets/images/documents-image.svg';
-import uploadYourDataImage from '../assets/images/upload-your-data-image.svg';
-import aiImage from '../assets/images/documents-image.svg';
-import SearchData from "../components/SearchData.tsx";
+import heroImage from '../assets/images/dashboard/hero-image.jpg';
+import documentsImage from '../assets/images/dashboard/documents-image.svg';
+import uploadYourDataImage from '../assets/images/dashboard/upload-your-data-image.svg';
+import aiImage from '../assets/images/dashboard/documents-image.svg';
+import SearchData from "../components/Search/SearchData.tsx";
 
 interface OptionBoxProps {
   onClick: () => void;

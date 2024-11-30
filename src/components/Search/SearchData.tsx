@@ -1,6 +1,6 @@
 import {Box, Typography} from "@mui/material";
 import DropdownDataFilter from "./DropdownDataFilter.tsx";
-import searchDataImage from '../assets/images/search-data-image.svg';
+import searchDataImage from '../../assets/images/search/search-data-image.svg';
 import {useEffect, useState} from "react";
 import RecommendedCompanies from "./RecommendedCompanies.tsx";
 

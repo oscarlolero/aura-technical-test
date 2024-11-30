@@ -1,8 +1,8 @@
 import {Box, Typography} from "@mui/material";
-import AuthForm from "../components/AuthForm.tsx";
+import AuthForm from "../components/Auth/AuthForm.tsx";
 import credentials from "../assets/data/credentials.json";
 import {useNavigate} from "react-router-dom";
-import logo from '../assets/images/white-logo.svg';
+import logo from '../assets/images/logos/white-logo.svg';
 export default function LoginPage() {
 
   const navigate = useNavigate()

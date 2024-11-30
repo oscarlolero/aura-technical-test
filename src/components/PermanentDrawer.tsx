@@ -1,6 +1,6 @@
 import {Box, Drawer} from "@mui/material";
-import logo from '../assets/images/white-drawer-logo.svg';
-import imageIcon from '../assets/images/icon-image.svg';
+import logo from '../assets/images/logos/white-drawer-logo.svg';
+import imageIcon from '../assets/images/etc/icon-image.svg';
 
 const IconRow = () => {
   return <Box>
