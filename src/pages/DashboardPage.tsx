@@ -7,10 +7,11 @@ import SearchData from "../components/Search/SearchData.tsx";
 import {OptionBox} from "../components/Dashboard/OptionBox.tsx";
 import {useState} from "react";
 import {UploadDataModal} from "../components/UploadData/UploadDataModal.tsx";
-
+import {useNavigate} from "react-router-dom";
 
 
 export default function DashboardPage() {
+  const navigate = useNavigate();
 
   const [newDataFormOpen, setNewDataFormOpen] = useState(false);
 
@@ -40,7 +41,7 @@ export default function DashboardPage() {
             <OptionBox
               label={'Search Data'}
               image={documentsImage}
-              onClick={() => alert('Search Data')}
+              onClick={() => null}
             />
             <OptionBox
               label={'Upload your Data'}
@@ -50,7 +51,7 @@ export default function DashboardPage() {
             <OptionBox
               label={'Try our AI Tool'}
               image={aiImage}
-              onClick={() => alert('Search Data')}
+              onClick={() => navigate('/askai')}
             />
           </Box>
 
