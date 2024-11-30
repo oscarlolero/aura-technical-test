@@ -16,7 +16,7 @@ export default function DropdownDataFilter({onTextFieldChange, selectedCompanies
 
   // Filter by symbol and name
   const filterCompanyOptions = (companiesOptions: Company[], {inputValue}: { inputValue: string }) => {
-    const filtered = companiesOptions.filter((company) => {
+    return companiesOptions.filter((company) => {
       const matchesInput =
         company.symbol.toLowerCase().includes(inputValue.toLowerCase()) ||
         company.name.toLowerCase().includes(inputValue.toLowerCase());
@@ -27,7 +27,6 @@ export default function DropdownDataFilter({onTextFieldChange, selectedCompanies
 
       return matchesInput && !isSelected;
     });
-    return filtered.slice(0, 5);
   };
 
   return <>

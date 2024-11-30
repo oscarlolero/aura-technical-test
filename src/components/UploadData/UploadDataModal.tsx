@@ -9,7 +9,7 @@ interface UploadDataFormProps {
 export const UploadDataModal = ({open, onClose}: UploadDataFormProps) => {
 
   const allExpertLabels = ['competitor', 'customer', 'industry consultant', 'former executive', 'partner'];
-  const [type, setType] = useState<number>(0);
+  const [type, settype] = useState<number>(0);
   const [expert, setExpert] = useState<string[]>([]);
 
   const handleExpertChange = (label: string) => {
@@ -80,7 +80,7 @@ export const UploadDataModal = ({open, onClose}: UploadDataFormProps) => {
           variant='outlined'
           fullWidth
           value={type}
-          onChange={(e) => setType(e.target.value as number)}
+          onChange={(e) => settype(e.target.value as number)}
         >
           <MenuItem value={0}>Company Research</MenuItem>
           <MenuItem value={1}>Management Research</MenuItem>

@@ -18,6 +18,7 @@ export const createCompletion = async (messages: Message[]) => {
     model: "gpt-4o-mini",
     messages: [
       {role: "system", content: "You are a helpful assistant."},
+      // @ts-expect-error - Couldn't find type for completionMessages
       ...completionMessages,
     ],
 

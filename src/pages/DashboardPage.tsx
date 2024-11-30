@@ -17,7 +17,7 @@ export default function DashboardPage() {
 
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', width: '100vw', height: '100vh'}}>
-      <Box sx={{height: '390px', width: '100%', backgroundImage: `url(${heroImage})`}}>
+      <Box sx={{height: '390px', width: '100%', backgroundImage: `url(${heroImage})`, backgroundSize: 'cover'}}>
         <Box sx={{
           height: '100%',
           width: '100%',

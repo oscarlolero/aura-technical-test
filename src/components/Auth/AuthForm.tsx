@@ -1,4 +1,4 @@
-import {Box, Button, FormLabel, TextField} from "@mui/material";
+import {Box, Button, InputLabel, TextField} from "@mui/material";
 import {useState} from "react";
 import {isValidMail} from "../../utils/utils.ts";
 
@@ -28,9 +28,9 @@ export default function AuthForm({onSubmit}: AuthFormProps) {
 
   return (
     <Box sx={{mt: 6, width: '320px', display: 'flex', flexDirection: 'column'}}>
-      <FormLabel sx={{fontSize: 14, color: 'white', fontWeight: 'bold', mb: 1}}>
+      <InputLabel sx={{fontSize: 14, color: 'white', fontWeight: 'bold', mb: 1}}>
         User
-      </FormLabel>
+      </InputLabel>
       <TextField
         sx={{
           height: '48px',
@@ -46,9 +46,9 @@ export default function AuthForm({onSubmit}: AuthFormProps) {
         helperText={errors.user}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <FormLabel sx={{fontSize: 14, color: 'white', fontWeight: 'bold', mt: 4, mb: 1}}>
+      <InputLabel sx={{fontSize: 14, color: 'white', fontWeight: 'bold', mt: 4, mb: 1}}>
         Password
-      </FormLabel>
+      </InputLabel>
       <TextField
         sx={{
           height: '48px',

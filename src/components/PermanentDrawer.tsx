@@ -1,6 +1,9 @@
-import {Box, Drawer} from "@mui/material";
+import {Box, Button, Drawer} from "@mui/material";
 import logo from '../assets/images/logos/white-drawer-logo.svg';
 import imageIcon from '../assets/images/etc/icon-image.svg';
+import {AuthContext} from "../context/AuthContext.tsx";
+import {useContext} from "react";
+import {useNavigate} from "react-router-dom";
 
 const IconRow = () => {
   return <Box>
@@ -15,6 +18,14 @@ const IconRow = () => {
 }
 
 export default function PermanentDrawer() {
+
+  const auth = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    auth?.logout();
+    navigate('/login');
+  }
   return (
     <Drawer
       sx={{
@@ -46,6 +57,13 @@ export default function PermanentDrawer() {
         <IconRow/>
         <IconRow/>
       </Box>
+      <Button
+        variant={'outlined'}
+        color={'secondary'}
+        sx={{ mx: 2, mb: 1, fontSize: 10 }}
+        onClick={() => handleLogOut()}>
+        Logout
+      </Button>
     </Drawer>
   )
 }
