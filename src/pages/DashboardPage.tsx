@@ -5,10 +5,15 @@ import uploadYourDataImage from '../assets/images/dashboard/upload-your-data-ima
 import aiImage from '../assets/images/dashboard/documents-image.svg';
 import SearchData from "../components/Search/SearchData.tsx";
 import {OptionBox} from "../components/Dashboard/OptionBox.tsx";
+import {useState} from "react";
+import {UploadDataModal} from "../components/UploadData/UploadDataModal.tsx";
 
 
 
 export default function DashboardPage() {
+
+  const [newDataFormOpen, setNewDataFormOpen] = useState(false);
+
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', width: '100vw', height: '100vh'}}>
       <Box sx={{height: '390px', width: '100%', backgroundImage: `url(${heroImage})`}}>
@@ -40,7 +45,7 @@ export default function DashboardPage() {
             <OptionBox
               label={'Upload your Data'}
               image={uploadYourDataImage}
-              onClick={() => alert('Search Data')}
+              onClick={() => setNewDataFormOpen(true)}
             />
             <OptionBox
               label={'Try our AI Tool'}
@@ -53,6 +58,9 @@ export default function DashboardPage() {
       </Box>
 
       <SearchData/>
+
+      <UploadDataModal open={newDataFormOpen} onClose={() => setNewDataFormOpen(false)}/>
+
     </Box>
   )
 }
