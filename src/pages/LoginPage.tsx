@@ -1,9 +1,12 @@
-import {Box, Typography} from "@mui/material";
-import AuthForm from "../components/Auth/AuthForm.tsx";
-import {useNavigate} from "react-router-dom";
-import logo from '../assets/images/logos/white-logo.png';
 import {useContext, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {Box, Typography} from "@mui/material";
+
 import {AuthContext} from "../context/AuthContext.tsx";
+import AuthForm from "../components/Auth/AuthForm.tsx";
+
+import logo from '../assets/images/logos/white-logo.png';
+
 export default function LoginPage() {
 
   const navigate = useNavigate()

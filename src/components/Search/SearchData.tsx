@@ -1,8 +1,10 @@
-import {Box, Typography} from "@mui/material";
-import DropdownDataFilter from "./DropdownDataFilter.tsx";
-import searchDataImage from '../../assets/images/search/search-data-image.svg';
 import {useEffect, useState} from "react";
+import {Box, Typography} from "@mui/material";
+
+import DropdownDataFilter from "./DropdownDataFilter.tsx";
 import RecommendedCompanies from "./RecommendedCompanies.tsx";
+
+import searchDataImage from '../../assets/images/search/search-data-image.svg';
 
 const MAX_SEARCH_DELAY = 2 * 1000;
 const MAX_SEARCH_RESULTS = 5;

@@ -1,13 +1,15 @@
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {Box, Typography} from "@mui/material";
+
+import SearchData from "../components/Search/SearchData.tsx";
+import {OptionBox} from "../components/Dashboard/OptionBox.tsx";
+import {UploadDataModal} from "../components/UploadData/UploadDataModal.tsx";
+
 import heroImage from '../assets/images/dashboard/hero-image.jpg';
 import documentsImage from '../assets/images/dashboard/documents-image.svg';
 import uploadYourDataImage from '../assets/images/dashboard/upload-your-data-image.svg';
 import aiImage from '../assets/images/dashboard/documents-image.svg';
-import SearchData from "../components/Search/SearchData.tsx";
-import {OptionBox} from "../components/Dashboard/OptionBox.tsx";
-import {useState} from "react";
-import {UploadDataModal} from "../components/UploadData/UploadDataModal.tsx";
-import {useNavigate} from "react-router-dom";
 
 
 export default function DashboardPage() {

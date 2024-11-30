@@ -1,9 +1,11 @@
-import {Box, Button, Drawer} from "@mui/material";
-import logo from '../assets/images/logos/white-drawer-logo.svg';
-import imageIcon from '../assets/images/etc/icon-image.svg';
-import {AuthContext} from "../context/AuthContext.tsx";
 import {useContext} from "react";
 import {useNavigate} from "react-router-dom";
+
+import {Box, Button, Drawer} from "@mui/material";
+
+import {AuthContext} from "../context/AuthContext.tsx";
+import logo from '../assets/images/logos/white-drawer-logo.svg';
+import imageIcon from '../assets/images/etc/icon-image.svg';
 
 const IconRow = () => {
   return <Box>

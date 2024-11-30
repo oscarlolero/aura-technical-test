@@ -1,5 +1,6 @@
-import {Box, Button, InputLabel, TextField} from "@mui/material";
 import {useState} from "react";
+import {Box, Button, InputLabel, TextField} from "@mui/material";
+
 import {isValidMail} from "../../utils/utils.ts";
 
 interface AuthFormProps {

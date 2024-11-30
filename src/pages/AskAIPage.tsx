@@ -1,7 +1,8 @@
 import {useState} from "react";
-import {Box, Button, TextField, Typography} from "@mui/material";
-import {createCompletion} from "../utils/openaiClient.ts";
 import {useNavigate} from "react-router-dom";
+import {Box, Button, TextField, Typography} from "@mui/material";
+
+import {createCompletion} from "../utils/openaiClient.ts";
 
 export interface Message {
   isAI: boolean;

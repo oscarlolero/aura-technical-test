@@ -1,5 +1,6 @@
-import {Autocomplete, Box, TextField} from "@mui/material";
 import {useState} from "react";
+import {Autocomplete, Box, TextField} from "@mui/material";
+
 import {Company} from "./SearchData.tsx";
 
 interface DropdownDataFilterProps {
