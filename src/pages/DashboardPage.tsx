@@ -4,40 +4,14 @@ import documentsImage from '../assets/images/dashboard/documents-image.svg';
 import uploadYourDataImage from '../assets/images/dashboard/upload-your-data-image.svg';
 import aiImage from '../assets/images/dashboard/documents-image.svg';
 import SearchData from "../components/Search/SearchData.tsx";
+import {OptionBox} from "../components/Dashboard/OptionBox.tsx";
 
-interface OptionBoxProps {
-  onClick: () => void;
-  label: string;
-  image: string;
-}
 
-const OptionBox = ({onClick, label, image}: OptionBoxProps) => {
-  return <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "white",
-      borderRadius: "4px",
-      padding: "16px",
-      width: "180px",
-      height: "180px",
-      cursor: "pointer",
-    }}
-    onClick={onClick}
-  >
-    <img src={image} alt={`${label} image`} style={{height: "120px", width: "120px"}}/>
-    <Typography variant={"subtitle1"} fontFamily={"Sansation"} color={"#3E4551"}>
-      {label}
-    </Typography>
-  </Box>;
-}
 
 export default function DashboardPage() {
   return (
     <Box sx={{display: 'flex', flexDirection: 'column', width: '100vw', height: '100vh'}}>
-      <Box sx={{height: '397px', width: '100%', backgroundImage: `url(${heroImage})`}}>
+      <Box sx={{height: '390px', width: '100%', backgroundImage: `url(${heroImage})`}}>
         <Box sx={{
           height: '100%',
           width: '100%',
