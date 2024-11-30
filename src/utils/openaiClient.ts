@@ -1,3 +1,5 @@
+// NOTE: This should be implemented in a backend service, not in the frontend
+
 import OpenAI from "openai";
 import {Message} from "../pages/AskAIPage.tsx";
 

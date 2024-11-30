@@ -79,6 +79,7 @@ export default function AuthForm({onSubmit}: AuthFormProps) {
           textShadow: '2px 2px 4px black',
         }}
         variant={'contained'}
+        disabled={!email || !password}
         onClick={() => handleSubmit()}
       >Continue</Button>
     </Box>

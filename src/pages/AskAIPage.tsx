@@ -9,7 +9,7 @@ export interface Message {
   text: string | null;
 }
 
-export const AskAIPage = () => {
+export default function AskAIPage() {
 
   const navigate = useNavigate();
 
