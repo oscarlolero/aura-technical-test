@@ -3,12 +3,13 @@ import {useState} from "react";
 import {Company} from "./SearchData.tsx";
 
 interface DropdownDataFilterProps {
+  onTextFieldChange: (newText: string) => void;
   selectedCompanies: Company[];
   onSelectedCompany: (newCompany: Company) => void;
   companies: Company[];
 }
 
-export default function DropdownDataFilter({selectedCompanies, onSelectedCompany, companies}: DropdownDataFilterProps) {
+export default function DropdownDataFilter({onTextFieldChange, selectedCompanies, onSelectedCompany, companies}: DropdownDataFilterProps) {
 
   const [inputValue, setInputValue] = useState('');
   const [value, setValue] = useState(null);
@@ -58,8 +59,10 @@ export default function DropdownDataFilter({selectedCompanies, onSelectedCompany
       renderInput={(params) => (
         <TextField
           {...params}
-          label="Search company..."
+          label="Search company"
+          placeholder='Type the company symbol or name...'
           variant="outlined"
+          onChange={(e) => onTextFieldChange(e.target.value)}
         />
       )}
     />

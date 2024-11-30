@@ -15,6 +15,7 @@ export default function RecommendedCompanies({recommendedCompanies, handleSelect
       {
         recommendedCompanies.map((company) => (
           <Box
+            key={company.symbol}
             sx={{border: "1px solid #CFCFD4", padding: "8px", borderRadius: "4px", cursor: "pointer"}}
             onClick={() => handleSelectedCompany(company)}
           >
