@@ -50,7 +50,7 @@ export default function SearchData() {
 
     setTypingTimeout(setTimeout(() => {
       handleAPIRequest(newText);
-    }, MAX_SEARCH_DELAY) as number);
+    }, MAX_SEARCH_DELAY) as unknown as number);
   }
 
   useEffect(() => {
