@@ -15,6 +15,10 @@ const themeOptions: ThemeOptions = {
       fontSize: '24px',
       fontWeight: 'bold',
     },
+    h4: {
+      fontSize: '22px',
+      fontWeight: 'bold',
+    },
     subtitle1: {
       fontSize: '18px',
       fontWeight: 'bold',
