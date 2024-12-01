@@ -62,4 +62,4 @@ This project is a technical test implementation using React and TypeScript. The 
         - VITE_USER_PASSWORD: The default user password
 
 ## 🛠️ Additional Notes
-    - The project is hosted on Vercel and can be accessed [here](https://aura-technical-test.vercel.app)
+- The project is hosted on Vercel and can be accessed [here](https://aura-technical-test.vercel.app)
