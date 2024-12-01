@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# React + TypeScript project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a technical test implementation using React and TypeScript. The primary goal was to replicate the provided Figma design and meet the outlined functional requirements.
 
-Currently, two official plugins are available:
+## 🚀 Main Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Authentication**
+    - Login form with validation for both email and password fields.
+    - The "Continue" button is enabled only when both fields are valid.
+    - Credentials are stored in a JSON file.
 
-## Expanding the ESLint configuration
+2. **Home Screen**
+    - Includes three main buttons: Search Data, Upload Data, and Try AI.
+    - Each button leads to the respective functionality:
+        - **Search Data**: A search bar with API integration and dynamic results.
+        - **Upload Data**: A form with validation and dynamic field behavior.
+        - **Try AI**: A basic chatbot interface using an AI service.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Form Validation**
+    - Required fields are marked with a red asterisk.
+    - Dynamic behavior based on the selected project type:
+        - If "Company Research" is selected, a "Companies" input field appears and becomes required.
+    - "Select All" option for the checklist, enabling/disabling all options simultaneously.
 
-- Configure the top-level `parserOptions` property like this:
+4. **API Integration**
+    - Financial Modeling Prep API implemented for the search functionality.
+    - Dynamic search results update as each character is entered.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+5. **AI Integration**
+    - Basic chatbot implementation with history feature using an AI service (OpenAI API).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: MUI
+- **Hosting**: Vercel
+- **APIs**:
+    - Financial Modeling Prep API for search functionality
+    - OpenAI API for chatbot functionality
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📝 Setup and Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/oscarlolero/aura-technical-test
+   cd aura-technical-test
+    ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev[.env](.env)
+   ```
+
+## 🛠️ .ENV Configuration
+    - Please create a .env file in the root directory with the following variables:
+        - VITE_FINANCIAL_MODELING_PREP_API_KEY: Your Financial Modeling Prep API key
+        - VITE_OPENAI_API_KEY: Your OpenAI API key
+        - VITE_USER_EMAIL: The default user email
+        - VITE_USER_PASSWORD: The default user password
+
+## 🛠️ Additional Notes
+    - The project is hosted on Vercel and can be accessed [here](https://aura-technical-test.vercel.app)

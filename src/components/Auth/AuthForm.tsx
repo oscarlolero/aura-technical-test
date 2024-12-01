@@ -77,6 +77,11 @@ export default function AuthForm({onSubmit}: AuthFormProps) {
           fontSize: '18px',
           textTransform: 'none',
           textShadow: '2px 2px 4px black',
+          '&.Mui-disabled': {
+            backgroundColor: '#2D3648',
+            color: 'white',
+            opacity: 0.5,
+          }
         }}
         variant={'contained'}
         disabled={!email || !password}
