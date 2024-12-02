@@ -6,7 +6,7 @@ import RecommendedCompanies from "./RecommendedCompanies.tsx";
 
 import searchDataImage from '../../assets/images/search/search-data-image.svg';
 
-const MAX_SEARCH_DELAY = 2 * 1000;
+const MAX_SEARCH_DELAY = 1000;
 const MAX_SEARCH_RESULTS = 5;
 
 export interface Company {
