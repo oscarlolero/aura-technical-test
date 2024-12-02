@@ -19,7 +19,7 @@ export default function SearchData() {
   const [selectedCompanies, setSelectedCompanies] = useState<Company[]>([]);
   const [recommendedCompanies, setRecommendedCompanies] = useState<Company[]>([]);
   const [companies, setCompanies] = useState<Company[]>();
-  const [typingTimeout, setTypingTimeout] = useState<number>(0);
+  const [typingTimeout, setTypingTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   const handleSelectedCompany = (newCompany: Company) => {
     setSelectedCompanies((prev) => [...prev, newCompany]);
@@ -50,8 +50,9 @@ export default function SearchData() {
 
     setTypingTimeout(setTimeout(() => {
       handleAPIRequest(newText);
-    }, MAX_SEARCH_DELAY) as unknown as number);
+    }, MAX_SEARCH_DELAY));
   }
+
 
   useEffect(() => {
     setRecommendedCompanies([
